@@ -1,0 +1,93 @@
+.container{
+    box-shadow: 0.1em 0.1em 0.8em grey;
+    margin: 1em auto;
+    padding: 1em;
+    width: 90%;
+}
+
+.salaryInput{
+    // width: 80%;
+    // margin: 2em auto;
+    align-items: center;
+
+    h3{
+        text-align: center;
+        font-size: 1.1em;
+    }
+
+    form{
+        padding-bottom: 2em;
+    }
+}
+
+.input{
+    display: flex;
+    width: 50%;
+    margin: 0.5em auto;
+
+    input{
+        outline: none;
+        flex: 1 0 80%;
+        height: 1.9em;
+        padding: 0.2em;
+        text-align: center;
+        font-size: 1.1em;
+    }
+
+    Button{
+        padding: 0.2em 1em;
+    }
+}
+
+.header{
+    text-align: center;
+}
+
+.subItems{
+    background-color: #ddd;
+    display: flex;
+    flex-direction: column;
+}
+
+.subItem{
+    border: 0.1em white solid;
+    padding: 0.5em;
+    position: relative;
+
+    h2{
+        color: black;
+    }
+
+    span{
+        font-weight: bolder;
+    }
+}
+
+.navbutton{
+    position: absolute;
+    padding: 0.2em 0.3em!important;
+    margin: 0.5em;
+    right: 0;
+    top: 0;
+}
+
+.subhead{
+
+    Button{
+        padding: 0 0.2em;
+    }
+}
+
+.tax{
+    display: none;
+    padding: 0.2em;
+}
+
+.taxbox{
+    display: block;
+}
+
+.interestbox{
+    display: none;
+}
+
