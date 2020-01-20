@@ -1,60 +1,75 @@
 import React, {Component} from 'react';
-import Tax from './Tax';
-import Interest from './Interest';
-import Provider from './Provider';
+import Income from './Income';
 
 import './App.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
-import Nav from 'react-bootstrap/Nav';
-
 
 class App extends Component{
   constructor(props){
     super(props);
     this.state = {
       salary: 0,
-      // total: 0,
+      tax: 0,
+      total: 0,
     }
   }
 
   submitForm = (e) => {
     e.preventDefault();
     let formData = new FormData(this.form);
-    let salary = formData.get('salary-input')
-    this.setState({salary: parseInt(salary)})
+    let salary = formData.get('salary-input');
+    let tax = 0;
+    this.setState({salary: parseInt(salary)});
+    if(salary <= 14000){
+      tax = 1.105;
+    }
+    if(salary > 14000 && salary <= 48000){
+      tax = 1.175;
+    }
+    if(salary > 48000 && salary <= 70000){
+      tax = 1.3;
+    }
+    else{
+      tax = 1.33;
+    }
+    let total = salary/tax;
+    tax = salary-total;
+    this.setState({total: parseFloat(total).toFixed(2)})
+    this.setState({tax: parseFloat(tax).toFixed(2)})
+    this.setState({salary: parseFloat(salary)})
   }
 
-  handleData = (data) => {
-    this.setState({total: data})
-  }
+  // navigateInterest = () => {
+  //   if(this.state.total != 0){
+  //     document.getElementsByClassName("taxbox")[0].style.display = "none";
+  //     document.getElementsByClassName("interestbox")[0].style.display = "block";
+  //   }
+  // }
   
   render(){
     return (
-        <div className="container">
-          <div className="header">
+      <div className="main">
+        <div className="header">
+          <div className="backgroundImage"></div>
+          <div className="headerText">
             <h1>Money Calculator</h1>
           </div>
+        </div>
           <div className="salaryInput">
             <h3>Input Your Yearly Salary</h3>
             <form onSubmit={this.submitForm} ref={(el) => {this.form = el}} className="input">
               <input type="number" name="salary-input" id="salary-input"/>
-              <Button onClick={this.calculateTax} type="submit" variant="success">Enter</Button>
+              <Button type="submit" variant="warning">Enter</Button>
             </form>
-            {this.state.salary >= 1 ?
-            <Provider>
-              <Nav fill variant="tabs" defaultActiveKey="/" className="subItems">
-                <Nav.Item className="subItem taxbox">
-                  <Tax salary={this.state.salary} data={this.handleData}/>
-                </Nav.Item>
-                <Nav.Item className="subItem interestbox">
-                  {/* <Interest total={this.state.total}/> */}
-                </Nav.Item>
-              </Nav>
-            </Provider> 
-            : null}
           </div>
-        </div>
+          
+          <>
+            {this.state.salary >= 1 ? 
+              <Income total={this.state.total} salary={this.state.salary} tax={this.state.tax}/>
+            : null}
+          </>
+      </div>
     );
   }
 }

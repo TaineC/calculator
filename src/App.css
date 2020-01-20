@@ -1,15 +1,40 @@
-.container {
-  -webkit-box-shadow: 0.1em 0.1em 0.8em grey;
-          box-shadow: 0.1em 0.1em 0.8em grey;
-  margin: 1em auto;
-  padding: 1em;
-  width: 90%;
+.header {
+  text-align: center;
+  height: 30vh;
+  position: relative;
+}
+
+.header .backgroundImage {
+  background-image: url("./img/gold.jpg");
+  background-position: top;
+  background-size: cover;
+  height: 100%;
+}
+
+.header .headerText {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 0;
+  right: 0;
+  -webkit-filter: blur(0) !important;
+          filter: blur(0) !important;
+}
+
+.header h1 {
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 .salaryInput {
+  background-color: #eee;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  z-index: 300;
+  padding: 1em;
 }
 
 .salaryInput h3 {
@@ -17,8 +42,9 @@
   font-size: 1.1em;
 }
 
-.salaryInput form {
-  padding-bottom: 2em;
+.salaryInput Button {
+  color: white;
+  border-radius: 0;
 }
 
 .input {
@@ -44,21 +70,6 @@
   padding: 0.2em 1em;
 }
 
-.header {
-  text-align: center;
-}
-
-.subItems {
-  background-color: #ddd;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
 .subItem {
   border: 0.1em white solid;
   padding: 0.5em;
@@ -73,28 +84,51 @@
   font-weight: bolder;
 }
 
-.navbutton {
-  position: absolute;
-  padding: 0.2em 0.3em !important;
-  margin: 0.5em;
-  right: 0;
-  top: 0;
+.incomeTable {
+  width: 70%;
+  margin: 1em auto 1em 0.5em;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: #eee;
+  max-height: 50vh;
+  overflow-y: scroll;
 }
 
-.subhead Button {
-  padding: 0 0.2em;
+.tableItem {
+  border: 1px white solid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1em;
+  margin: auto;
 }
 
-.tax {
-  display: none;
-  padding: 0.2em;
+.tableItem p {
+  width: 50%;
+  margin: 0;
 }
 
-.taxbox {
-  display: block;
+.tableItem p:nth-child(2) {
+  font-weight: bold;
 }
 
-.interestbox {
-  display: none;
+.finalIncome {
+  margin: 2em 0.5em 0 0.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.incomeTime p:nth-child(1) {
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 0.2em;
+}
+
+.incomeTime p:nth-child(2) {
+  text-align: center;
 }
 /*# sourceMappingURL=App.css.map */

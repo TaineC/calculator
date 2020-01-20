@@ -1,22 +1,45 @@
-.container{
-    box-shadow: 0.1em 0.1em 0.8em grey;
-    margin: 1em auto;
-    padding: 1em;
-    width: 90%;
+.header{
+    text-align: center;
+    height: 30vh;
+    position: relative;
+
+    .backgroundImage{
+        background-image: url('./img/gold.jpg');
+        background-position: top;
+        background-size: cover;
+        height: 100%;
+    }
+
+    .headerText{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        right: 0;
+        filter: blur(0)!important;
+    }
+
+    h1{
+        color: white;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
 }
 
 .salaryInput{
-    // width: 80%;
-    // margin: 2em auto;
+    background-color: #eee;
     align-items: center;
+    z-index: 300;
+    padding: 1em;
 
     h3{
         text-align: center;
         font-size: 1.1em;
     }
 
-    form{
-        padding-bottom: 2em;
+    Button{
+        color: white;
+        border-radius: 0;
     }
 }
 
@@ -39,16 +62,6 @@
     }
 }
 
-.header{
-    text-align: center;
-}
-
-.subItems{
-    background-color: #ddd;
-    display: flex;
-    flex-direction: column;
-}
-
 .subItem{
     border: 0.1em white solid;
     padding: 0.5em;
@@ -63,31 +76,46 @@
     }
 }
 
-.navbutton{
-    position: absolute;
-    padding: 0.2em 0.3em!important;
-    margin: 0.5em;
-    right: 0;
-    top: 0;
+.incomeTable{
+    width: 70%;
+    margin: 1em auto 1em 0.5em;
+    justify-content: space-around;
+    background-color: #eee;
+    max-height: 50vh;
+    overflow-y: scroll;
 }
 
-.subhead{
+.tableItem{
+    border: 1px white solid;
+    display: flex;
+    padding: 1em;
+    margin: auto;
 
-    Button{
-        padding: 0 0.2em;
+    p{
+        width: 50%;
+        margin: 0;
+    }
+
+    p:nth-child(2){
+        font-weight: bold;
     }
 }
 
-.tax{
-    display: none;
-    padding: 0.2em;
+.finalIncome{
+    margin: 2em 0.5em 0 0.5em;
+    display: flex;
+    justify-content: space-between;
 }
 
-.taxbox{
-    display: block;
-}
+.incomeTime{
 
-.interestbox{
-    display: none;
-}
+    p:nth-child(1){
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 0.2em;
+    }
 
+    p:nth-child(2){
+        text-align: center;
+    }
+}

@@ -1,6 +1,4 @@
 import React, {Component} from 'react';
-import Tax from './Tax';
-import Interest from './Interest';
 import Calculator from './Calculator';
 import './App.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -20,9 +18,7 @@ class App extends Component{
 
         <BrowserRouter basename='/'>
           <Switch>
-            <Route exact path='/' component={Calculator}/>
-            <Route path='/tax' component={Tax}/>
-            <Route path='/interst' component={Interest}/>
+            <Route path='/' component={Calculator}/>
           </Switch>
         </BrowserRouter>
       </div>
