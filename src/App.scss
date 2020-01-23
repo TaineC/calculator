@@ -64,6 +64,9 @@
 
 .incomeResults{
     display: flex;
+    margin: 1em auto!important;
+    // border: 1px red solid;
+    flex-direction: column;
 }
 
 .subItem{
@@ -192,5 +195,20 @@
     p{
         text-align: center;
         font-weight: bold;
+    }
+}
+
+@media only screen and (min-width: 40em){
+
+    .incomeResults{
+        flex-direction: row;
+    }
+}
+
+@media only screen and (min-width: 60em){
+
+    .incomeResults{
+        width: 80%;
+        margin: auto;
     }
 }

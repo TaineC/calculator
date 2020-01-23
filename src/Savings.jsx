@@ -37,7 +37,6 @@ class Savings extends Component{
           <h3>Your Total Saved Will Be:</h3>
           <p>${this.state.totalSaved}</p>
         </div>
-
       </div>
     );
   }
