@@ -70,6 +70,12 @@
   padding: 0.2em 1em;
 }
 
+.incomeResults {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .subItem {
   border: 0.1em white solid;
   padding: 0.5em;
@@ -85,8 +91,10 @@
 }
 
 .incomeTable {
-  width: 70%;
-  margin: 1em auto 1em 0.5em;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 60%;
+          flex: 1 0 60%;
+  margin: 0.5em;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   background-color: #eee;
@@ -113,22 +121,106 @@
 }
 
 .finalIncome {
-  margin: 2em 0.5em 0 0.5em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 30%;
+          flex: 1 0 30%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.incomeTime {
+  padding: 1em;
+  border: 1px white solid;
+  width: 30%;
+  -webkit-box-flex: inherit;
+      -ms-flex-positive: inherit;
+          flex-grow: inherit;
 }
 
 .incomeTime p:nth-child(1) {
   font-weight: bold;
   text-align: center;
-  margin-bottom: 0.2em;
+  margin: 0;
 }
 
 .incomeTime p:nth-child(2) {
   text-align: center;
+  margin: 0;
+}
+
+.savingsTable {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 35%;
+          flex: 0 0 35%;
+  margin: 0.5em;
+  background-color: #eee;
+}
+
+.savingsInput {
+  background-color: #eee;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 300;
+  padding: 1em;
+  border: 1px white solid;
+}
+
+.savingsInput h3 {
+  text-align: center;
+  font-size: 1.1em;
+}
+
+.savingsInput Button {
+  color: white;
+  border-radius: 0;
+}
+
+.savingsInput .inputPercent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 1em;
+  font-size: 0.8em;
+}
+
+.savingsInput .inputPercent input {
+  outline: none;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 40%;
+          flex: 1 0 40%;
+  height: 1.9em;
+  padding: 0.2em;
+  margin: 0.5em;
+  text-align: center;
+  font-size: 1.1em;
+}
+
+.savingsInput .inputPercent Button {
+  padding: 0.2em 1em;
+  margin: 0.5em;
+}
+
+.savingResult {
+  border: 1px white solid;
+}
+
+.savingResult h3 {
+  font-size: 1.1em;
+  text-align: center;
+  padding: 0.67em;
+  margin-bottom: 0;
+}
+
+.savingResult p {
+  text-align: center;
+  font-weight: bold;
 }
 /*# sourceMappingURL=App.css.map */

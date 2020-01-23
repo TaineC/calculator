@@ -62,6 +62,10 @@
     }
 }
 
+.incomeResults{
+    display: flex;
+}
+
 .subItem{
     border: 0.1em white solid;
     padding: 0.5em;
@@ -76,9 +80,11 @@
     }
 }
 
+//income component
+
 .incomeTable{
-    width: 70%;
-    margin: 1em auto 1em 0.5em;
+    flex: 1 0 60%;
+    margin: 0.5em;
     justify-content: space-around;
     background-color: #eee;
     max-height: 50vh;
@@ -102,20 +108,89 @@
 }
 
 .finalIncome{
-    margin: 2em 0.5em 0 0.5em;
     display: flex;
-    justify-content: space-between;
+    flex: 1 0 30%;
+    flex-wrap: wrap;
 }
 
 .incomeTime{
+    padding: 1em;
+    border: 1px white solid;
+    width: 30%;
+    flex-grow: inherit;
 
     p:nth-child(1){
         font-weight: bold;
         text-align: center;
-        margin-bottom: 0.2em;
+        margin: 0;
     }
 
     p:nth-child(2){
         text-align: center;
+        margin: 0;
+    }
+}
+
+//savings component
+
+.savingsTable{
+    flex: 0 0 35%;
+    margin: 0.5em;
+    background-color: #eee;
+}
+
+.savingsInput{
+    background-color: #eee;
+    align-items: center;
+    z-index: 300;
+    padding: 1em;
+    border: 1px white solid;
+
+    h3{
+        text-align: center;
+        font-size: 1.1em;
+    }
+
+    Button{
+        color: white;
+        border-radius: 0;
+    }
+
+    .inputPercent{
+        display: flex;
+        flex-direction: column;
+        margin: 1em;
+        font-size: 0.8em;
+    
+        input{
+            outline: none;
+            flex: 1 0 40%;
+            height: 1.9em;
+            padding: 0.2em;
+            margin: 0.5em;
+            text-align: center;
+            font-size: 1.1em;
+        }
+    
+        Button{
+            padding: 0.2em 1em;
+            margin: 0.5em;
+        }
+    }
+}
+
+.savingResult{
+    border: 1px white solid;
+
+    h3{
+        font-size: 1.1em;
+        text-align: center;
+        padding: 0.67em;
+        margin-bottom: 0;
+    }
+
+    p{
+        text-align: center;
+        font-weight: bold;
     }
 }
