@@ -3,6 +3,7 @@ import Calculator from './Calculator';
 import './App.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
+import Button from 'react-bootstrap/Button'
 
 class App extends Component{
   constructor(props){
@@ -15,11 +16,15 @@ class App extends Component{
   render(){
     return (
       <div className="App">
+        <div className="link">
+          <Button variant="warning" href="https://github.com/TaineC/calculator" target="_blank"><i className="fab fa-github"/></Button>
+        </div>
 
         <BrowserRouter basename='/'>
           <Switch>
             <Route path='/' component={Calculator}/>
           </Switch>
+          
         </BrowserRouter>
       </div>
     );
