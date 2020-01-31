@@ -1,3 +1,21 @@
+IMPORTANT CONCEPTS AND CODE TO REFER TO:
+
+1. IN: src/Calculator.jsx
+
+ - Function that would define different conditions based on what number the user inputs.
+
+2. IN: src/Income.jsx
+
+ - Prop from calculator is passed down so when the component calculations are made for various time periods.
+ - When prop updates the function will calculate the new input and component will re-render.
+
+3. IN: src/Savings.jsx
+
+ - Prop is passed down for the users total after tax that can calculate how much they are willing to save. The function's calculations are made based on    multiple inputs to return how much the user is able to save.
+
+
+######################################################
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
