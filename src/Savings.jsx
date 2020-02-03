@@ -30,7 +30,7 @@ class Savings extends Component{
           <form onSubmit={this.submitForm} ref={(el) => {this.form = el}} className="inputPercent">
             <input type="number" min="1" max="100" name="percentage-input" id="percentage-input" placeholder="Enter Percentage You Want to Save"/>
             <input type="number" min="1" max="100" name="years-input" id="years-input" placeholder="Enter How Many Years"/>
-            <Button type="submit" variant="warning">Enter</Button>
+            <Button type="submit">Enter</Button>
           </form>
         </div>
         <div className="savingResult">

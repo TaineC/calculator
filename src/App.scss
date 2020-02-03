@@ -1,13 +1,23 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css');
 
+$maincolor: #94FF78;
+$secondarycolor: #7DD966;
+
 .link{
     position: absolute;
-    margin: 0.5em;
+    margin: 1em;
     z-index: 250;
+    right: 0;
 
-    i{
-        font-size: 1.5em;
-        padding: 0.3em;
+    a{
+        background-color: $maincolor!important;
+        border: none;
+        color: black;
+        font-size: 0.8em;
+    }
+
+    a:hover{
+        color: black;
     }
 }
 
@@ -17,10 +27,16 @@
     position: relative;
 
     .backgroundImage{
-        background-image: url('./img/gold.jpg');
-        background-position: top;
+        background-image: url('./img/hexagon_background_3D.png');
+        background-position: center;
         background-size: cover;
         height: 100%;
+    }
+
+    .backgroundCover{
+        background-color: black;
+        height: 100%;
+        opacity: 0.6;
     }
 
     .headerText{
@@ -33,9 +49,9 @@
     }
 
     h1{
-        color: white;
+        color: #7DD966;
         text-transform: uppercase;
-        font-weight: bold;
+        font-weight: 900;
     }
 }
 
@@ -51,8 +67,15 @@
     }
 
     Button{
-        color: white;
+        color: black;
         border-radius: 0;
+        background-color: $maincolor;
+        border: none;
+    }
+
+    Button:hover{
+        background-color: $secondarycolor;
+        color: black;
     }
 }
 
@@ -187,10 +210,19 @@
             text-align: center;
             font-size: 1.1em;
         }
-    
+
         Button{
+            color: black;
+            border-radius: 0;
+            background-color: $maincolor;
+            border: none;
             padding: 0.2em 1em;
             margin: 0.5em;
+        }
+    
+        Button:hover{
+            background-color: $secondarycolor;
+            color: black;
         }
     }
 }

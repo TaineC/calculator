@@ -44,8 +44,13 @@ class App extends Component{
   render(){
     return (
       <div className="main">
+        <div className="link">
+          <Button href="https://github.com/TaineC/calculator" target="_blank">View Source Code</Button>
+        </div>
         <div className="header">
-          <div className="backgroundImage"></div>
+          <div className="backgroundImage">
+            <div className="backgroundCover"></div>
+          </div>
           <div className="headerText">
             <h1>Money Calculator</h1>
           </div>
@@ -54,7 +59,7 @@ class App extends Component{
           <h3>Input Your Yearly Salary</h3>
           <form onSubmit={this.submitForm} ref={(el) => {this.form = el}} className="input">
             <input type="number" name="salary-input" id="salary-input"/>
-            <Button type="submit" variant="warning">Enter</Button>
+            <Button type="submit">Enter</Button>
           </form>
         </div>
         <div className="incomeResults">
